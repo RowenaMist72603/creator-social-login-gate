@@ -1,0 +1,16 @@
+{
+  "name": "creator-social-login-gate",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Google/GitHub sign-in callback for a creator storefront, with a captcha-scored session decision",
+  "scripts": {
+    "dev": "node --experimental-strip-types src/signin_callback.ts",
+    "test": "node --experimental-strip-types --test test/signin_decision.test.ts",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "engines": { "node": ">=22.6" },
+  "dependencies": { "zod": "^3.23.8" },
+  "devDependencies": { "typescript": "^5.6.2", "@types/node": "^22.7.4" },
+  "license": "MIT"
+}
