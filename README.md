@@ -80,3 +80,8 @@ The code stays simple on purpose — here's what to set up before going live: Th
 
 **Creator Social Login Gate: CAPTCHA**
 - **Creator Social Login Gate:** Verify tokens **server-side** only (`POST /v1/captcha/verify`); configure your widget/site key and a sensible score threshold.
+
+## Common questions
+
+**Why is there no client library in the dependencies?**  
+One is not needed: `captcha.verify` is a single HTTPS call inside `src/infrai_client.ts`, and `npx tsx` is the only tooling involved. For a social sign in abuse gate example that is the entire dependency story.
